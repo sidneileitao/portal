@@ -26,18 +26,63 @@
       var res = url.split('?'); 
       var categoria = res[1].split("=");
 
+      var aFornecedores = retornaFornecedores(categoria);
+
       window.onload=function(){
-      var p = document.getElementById('divTitulo');
-      p.innerHTML += '<H3 class="site-subtitle">' + categoria[1] + '</H3>';
-      }
+      
+        var p = document.getElementById('divTitulo');
+        
+        p.innerHTML += '<H3 class="site-subtitle">' + categoria[1] + '</H3>';
 
-      function montaGradeFornecedores( categoria )
-      {
+        var pSection = document.getElementById('seçao_fornecedores_principal');
 
-        var aFornecedores = [];
-        //afornecedores.push({categoria,"Fornecedor 1",})      
+        var colunas = 1;
+
+        var texto="";
+
+        for( aFornecedoresElem = 0; aFornecedoresElem < aFornecedores.length ; aFornecedoresElem++){
+          
+          if(colunas == 1){
+            texto += '<div class="row">';
+          }
+          
+          texto += '<div class="col s12 m4">';
+            texto += '<div class="card green">';
+              texto += '<div class="card-image" style="text-align: center;">';
+                texto += '<img src="imagens/hortifruti.jpg">';
+              texto += '</div>';
+
+              texto += '<div class="card-content">';
+                texto += '<span class="card-title">' + aFornecedores[aFornecedoresElem][0] + '</span>';   
+                texto += '<p>' + aFornecedores[aFornecedoresElem][1][0] + '</p>';
+              texto += '</div>';
+              
+              texto += '<div class="card-action">';
+                texto += '<a href="https://wa.me/'+aFornecedores[aFornecedoresElem][1][1]+'?text=sua%20mensagem"><img src="./imagens/WhatsApp-icone.png" alt="HTML tutorial" width="32" height="32" />'+aFornecedores[aFornecedoresElem][1][1]+'</a>';
+              texto += '</div>';
+    
+              texto += '<div class="card-action">';
+                texto += '<a href="mailto:'+aFornecedores[aFornecedoresElem][1][4]+'?subject=Informações"><img src="./imagens/email_icone.png" alt="HTML tutorial" width="32" height="32" />'+aFornecedores[aFornecedoresElem][1][4]+'</a>';
+              texto += '</div>';
+                  
+
+            texto += '</div>';
+          texto += '</div>';
+
+          colunas++;
+
+          if (colunas == 4){
+            texto += '</div>';
+            colunas = 1;
+          }
+
+        }
+
+        pSection.innerHTML += texto;
 
 
+
+      
       }
 
 
@@ -68,36 +113,9 @@
       <div class="container" id="divTitulo"></div>
     </header>
     
-    <div class="container" id="divFornecedores">
+    <section id="seçao_fornecedores_principal">
 
-      <div class="row">
-
-        <div class="col s12 m7">
-        
-          <div class="card">
-        
-            <div class="card-image">
-              <img src="imagens/hortifruti.jpg">
-            </div>
-        
-            <div class="card-content">
-              <span class="card-title">Padaria Santa Maria</span>   
-              <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-            </div>
-        
-            <div class="card-action">
-              <a href="https://wa.me/5511999473653?text=sua%20mensagem"><img src="./imagens/WhatsApp-icone.png" alt="HTML tutorial" width="32" height="32" />+55(11)9 9947-3653</a>
-            </div>
     
-            <div class="card-action">
-              <a href="mailto:sidneifleitao@gmail.com?subject=Informações"><img src="./imagens/email_icone.png" alt="HTML tutorial" width="32" height="32" />sidneifleitao@gmail.com</a>
-            </div>
-    
-          </div>
-    
-        </div>
-    
-      </div>
     
     </div>
  

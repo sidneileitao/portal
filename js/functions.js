@@ -13,9 +13,22 @@ function retornaCategorias()
   aCategorias.push(["queijos",["queijos","./imagens/queijos.jpg",]]) ;
   aCategorias.push(["vestuário",["vestuário","./imagens/vestuario.jpg",]]) ;
   aCategorias.push(["reparos domésticos",["reparos domésticos","./imagens/reparos_domésticos.jpg",]]) ;
-  aCategorias.push(["serviços automotivos",["serviços automotivos","./imagens/artesanato.jpg",]]) ;
+  aCategorias.push(["serviços automotivos",["serviços automotivos","./imagens/automotivos.jpg",]]) ;
 
   return aCategorias;
+
+}
+
+//------------------------------------
+function retornaFornecedores(categoria)
+{
+  var aFornecedores = [];
+  
+  aFornecedores.push(["Padaria Santa Maria",["descrição","+5511999473653","+5511999473653","1136217788","dsdasa@gmail.com","www.google.com.br","/imagens/padaria.jpg",]]) ;
+  aFornecedores.push(["Pães & Doces Da Villa",["descrição","+5511999473653","+5511999473653","1136217788","dsdasa@gmail.com","www.google.com.br","/imagens/padaria.jpg",]]) ;
+  aFornecedores.push(["Remédios Pães Artesanais",["descrição","+5511999473653","+5511999473653","1136217788","dsdasa@gmail.com","www.google.com.br","/imagens/padaria.jpg",]]) ;
+  
+  return aFornecedores;
 
 }
 
