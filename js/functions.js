@@ -23,11 +23,27 @@ function retornaCategorias()
 function retornaFornecedores(categoria)
 {
   var aFornecedores = [];
+
+  if( categoria == "artesanato"){
+    aFornecedores.push(["Lana Maria Artesanato",["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean luctus faucibus nisl, tincidunt cursus massa gravida vel. Aenean feugiat tortor vitae nibh facilisis, a lobortis lacus tincidunt.","+5511999473653","+5511999473653","1136217788","dsdasa@gmail.com","www.google.com.br","./imagens/artesanato1.jpg",]]) ;
+    aFornecedores.push(["Casa Faiol",["Cras at tellus enim. Sed a leo eget nulla hendrerit molestie sit amet eget elit. Integer at dictum tortor. Cras aliquet posuere augue, lacinia commodo urna varius vitae.","+5511999473653","+5511999473653","1136217788","dsdasa@gmail.com","www.google.com.br","./imagens/artesanato2.jpg",]]) ;
+    aFornecedores.push(["Loja de Artesanato",["Integer eu diam in diam gravida dictum. Praesent nec magna facilisis, interdum ipsum eu, mattis diam. Nam sed metus tortor. Vivamus commodo urna nec consequat commodo.","+5511999473653","+5511999473653","1136217788","dsdasa@gmail.com","www.google.com.br","./imagens/artesanato3.jpeg",]]) ;
   
-  aFornecedores.push(["Padaria Santa Maria",["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean luctus faucibus nisl, tincidunt cursus massa gravida vel. Aenean feugiat tortor vitae nibh facilisis, a lobortis lacus tincidunt.","+5511999473653","+5511999473653","1136217788","dsdasa@gmail.com","www.google.com.br","/imagens/padaria.jpg",]]) ;
-  aFornecedores.push(["Pães & Doces Da Villa",["Cras at tellus enim. Sed a leo eget nulla hendrerit molestie sit amet eget elit. Integer at dictum tortor. Cras aliquet posuere augue, lacinia commodo urna varius vitae.","+5511999473653","+5511999473653","1136217788","dsdasa@gmail.com","www.google.com.br","/imagens/padaria.jpg",]]) ;
-  aFornecedores.push(["Remédios Pães Artesanais",["Integer eu diam in diam gravida dictum. Praesent nec magna facilisis, interdum ipsum eu, mattis diam. Nam sed metus tortor. Vivamus commodo urna nec consequat commodo.","+5511999473653","+5511999473653","1136217788","dsdasa@gmail.com","www.google.com.br","/imagens/padaria.jpg",]]) ;
-  
+  }
+  else if ( categoria == "hortifruti")
+  {
+    aFornecedores.push(["Padaria Santa Maria",["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean luctus faucibus nisl, tincidunt cursus massa gravida vel. Aenean feugiat tortor vitae nibh facilisis, a lobortis lacus tincidunt.","+5511999473653","+5511999473653","1136217788","dsdasa@gmail.com","www.google.com.br","./imagens/hortifruti1.jpeg",]]) ;
+    aFornecedores.push(["Pães & Doces Da Villa",["Cras at tellus enim. Sed a leo eget nulla hendrerit molestie sit amet eget elit. Integer at dictum tortor. Cras aliquet posuere augue, lacinia commodo urna varius vitae.","+5511999473653","+5511999473653","1136217788","dsdasa@gmail.com","www.google.com.br","./imagens/hortifruti2.jpeg",]]) ;
+    aFornecedores.push(["Remédios Pães Artesanais",["Integer eu diam in diam gravida dictum. Praesent nec magna facilisis, interdum ipsum eu, mattis diam. Nam sed metus tortor. Vivamus commodo urna nec consequat commodo.","+5511999473653","+5511999473653","1136217788","dsdasa@gmail.com","www.google.com.br","./imagens/hortifruti3.jpeg",]]) ;
+  }
+  else
+  {
+    aFornecedores.push(["Padaria Santa Maria",["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean luctus faucibus nisl, tincidunt cursus massa gravida vel. Aenean feugiat tortor vitae nibh facilisis, a lobortis lacus tincidunt.","+5511999473653","+5511999473653","1136217788","dsdasa@gmail.com","www.google.com.br","/imagens/padaria.jpg",]]) ;
+    aFornecedores.push(["Pães & Doces Da Villa",["Cras at tellus enim. Sed a leo eget nulla hendrerit molestie sit amet eget elit. Integer at dictum tortor. Cras aliquet posuere augue, lacinia commodo urna varius vitae.","+5511999473653","+5511999473653","1136217788","dsdasa@gmail.com","www.google.com.br","/imagens/padaria.jpg",]]) ;
+    aFornecedores.push(["Remédios Pães Artesanais",["Integer eu diam in diam gravida dictum. Praesent nec magna facilisis, interdum ipsum eu, mattis diam. Nam sed metus tortor. Vivamus commodo urna nec consequat commodo.","+5511999473653","+5511999473653","1136217788","dsdasa@gmail.com","www.google.com.br","/imagens/padaria.jpg",]]) ;
+
+  }
+
   return aFornecedores;
 
 }

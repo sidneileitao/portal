@@ -26,10 +26,11 @@
       var res = url.split('?'); 
       var categoria = res[1].split("=");
 
-      var aFornecedores = retornaFornecedores(categoria);
 
       window.onload=function(){
-      
+
+        var aFornecedores = retornaFornecedores(categoria[1]);
+
         var p = document.getElementById('divTitulo');
         
         p.innerHTML += '<H3 style="text-align:center;color:#79b564">' + categoria[1] + '</H3>';
@@ -49,7 +50,7 @@
           texto += '<div class="col s12 m4">';
             texto += '<div class="card green">';
               texto += '<div class="card-image" style="text-align: center;">';
-                texto += '<img src="imagens/hortifruti.jpg">';
+                texto += '<img src="' + aFornecedores[aFornecedoresElem][1][6]+ '">';
               texto += '</div>';
 
               texto += '<div class="card-content white-text">';
