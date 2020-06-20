@@ -1,0 +1,64 @@
+/*soft reset do css*/
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background-color: #7ad588;;
+   background-size: auto 100vh;
+   height: 100vh;
+   font-family: "Raleway";
+   font-size: 12px;
+}
+
+/* se a tela tiver pelo menos 400px vai carregar estes estilos */
+@media (min-width: 400px) {
+   body {
+      font-size: 14px;
+   }
+}
+
+/* breakpoint */
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* breakpoint */
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+header {
+   height: 30vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.site-subtitle,
+.site-title {
+   color: whitesmoke;
+   text-align: center;
+   letter-spacing: 0.2em;
+   font-size: 3em;
+}
+
+.site-title {
+   font-size: 4em;
+   font-family: "Raleway";
+ }
+ 
+.site-subtitle {
+   letter-spacing: 0.1em;
+   font-size: 2.12em;
+   font-weight: 100;
+   font-family: "Raleway";
+   line-height: 0.8em;
+   padding-right: 11px;
+}
