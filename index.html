@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">  
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="./js/functions.js"></script>
+    
+    <title>Portal Negócios</title>
+    
+    <script type="text/javascript">
+
+      var aCategorias = retornaCategorias();
+
+      window.onload=function(){
+
+        var p = document.getElementById('seçao_categorias_principal');
+
+        var colunas = 1;
+
+        var texto="";
+
+        for( aCategoriasElem = 0; aCategoriasElem < aCategorias.length ; aCategoriasElem++){
+          
+          if(colunas == 1){
+            texto += '<div class="row">';
+          }
+          
+          texto += '<div class="col s12 m4">';
+            texto += '<div class="card green">';
+              texto += '<div class="card-image" style="text-align: center;">';
+                  
+                texto += '<a style="color:white;" href="catalogo.html?categoria=' + aCategorias[aCategoriasElem][0] + '"><img src='+aCategorias[aCategoriasElem][1][1]+' class="responsive-img">'+aCategorias[aCategoriasElem][0]+'</a>';
+
+              texto += '</div>';    
+            texto += '</div>';
+          texto += '</div>';
+
+          colunas++;
+
+          if (colunas == 4){
+            texto += '</div>';
+            colunas = 1;
+          }
+
+        }
+
+        p.innerHTML += texto;
+
+      }
+
+
+    </script>
+  </head>
+        
+  <body>
+    <header>
+
+      <nav style="background-color: #79b564;">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo center">Empreendedores do Portal do Parque</a>
+          <a href="#" data-target="menu-mobile" class="sidenav-trigger" ><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalogo.html">catalogo</a></li>
+            <li><a href="contato.html">contato</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+      <ul class="sidenav" id="menu-mobile">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalogo.html">catalogo</a></li>
+        <li><a href="contato.html">contato</a></li>
+      </ul>
+          
+     
+    </header>
+
+    <section id="seçao_categorias_principal">
+      
+    </section>
+
+
+  </body>
+
+</html>
