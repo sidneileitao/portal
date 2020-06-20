@@ -5,7 +5,6 @@
     <meta charset="UTF-8" http-equiv=”Content-Type” name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <link rel="stylesheet" href="./css/styles.css">  
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -32,7 +31,7 @@
       
         var p = document.getElementById('divTitulo');
         
-        p.innerHTML += '<H3 class="site-subtitle">' + categoria[1] + '</H3>';
+        p.innerHTML += '<H3 style="text-align:center;color:#79b564">' + categoria[1] + '</H3>';
 
         var pSection = document.getElementById('seçao_fornecedores_principal');
 
@@ -52,17 +51,17 @@
                 texto += '<img src="imagens/hortifruti.jpg">';
               texto += '</div>';
 
-              texto += '<div class="card-content">';
+              texto += '<div class="card-content white-text">';
                 texto += '<span class="card-title">' + aFornecedores[aFornecedoresElem][0] + '</span>';   
                 texto += '<p>' + aFornecedores[aFornecedoresElem][1][0] + '</p>';
               texto += '</div>';
               
               texto += '<div class="card-action">';
-                texto += '<a href="https://wa.me/'+aFornecedores[aFornecedoresElem][1][1]+'?text=sua%20mensagem"><img src="./imagens/WhatsApp-icone.png" alt="HTML tutorial" width="32" height="32" />'+aFornecedores[aFornecedoresElem][1][1]+'</a>';
+                texto += '<a style="color:white;" href="https://wa.me/'+aFornecedores[aFornecedoresElem][1][1]+'?text=sua%20mensagem"><img src="./imagens/WhatsApp-icone.png" alt="HTML tutorial" width="32" height="32" />'+aFornecedores[aFornecedoresElem][1][1]+'</a>';
               texto += '</div>';
     
               texto += '<div class="card-action">';
-                texto += '<a href="mailto:'+aFornecedores[aFornecedoresElem][1][4]+'?subject=Informações"><img src="./imagens/email_icone.png" alt="HTML tutorial" width="32" height="32" />'+aFornecedores[aFornecedoresElem][1][4]+'</a>';
+                texto += '<a style="color:white;"href="mailto:'+aFornecedores[aFornecedoresElem][1][4]+'?subject=Informações"><img src="./imagens/email_icone.png" alt="HTML tutorial" width="32" height="32" />'+aFornecedores[aFornecedoresElem][1][4]+'</a>';
               texto += '</div>';
                   
 
